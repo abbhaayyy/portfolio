@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "personal website",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abbhaayyy/portfolio.git"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "abhay mahendera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abbhaayyy/portfolio/issues"
+  },
+  "homepage": "https://github.com/abbhaayyy/portfolio#readme"
+}
