@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | Abhay Mahendera</title>
+    <style>
+        body {
+            background-color: #00102b;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #resume-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #resume-link:hover {
+            background-color: #45a049;
+        }
+
+        .shooting-star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background-color: #ffd700; /* Yellow color */
+            animation: shootingStar 2s linear infinite;
+            opacity: 0;
+        }
+
+        @keyframes shootingStar {
+            0% {
+                transform: translateY(-100vh) rotate(45deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(45deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Coming Soon...</h1>
+        <a id="resume-link" href="https://docs.google.com/document/d/1M0VGRLSGoB6YwcFlwRmoVFROhKVvn14E/edit?usp=sharing&ouid=116328693547832382545&rtpof=true&sd=true" target="_blank">View Resume</a>
+    </div>
+
+    <script>
+        // Create shooting stars dynamically
+        for (let i = 0; i < 20; i++) { // Increased density to 20 stars
+            createShootingStar();
+        }
+
+        function createShootingStar() {
+            const star = document.createElement('div');
+            star.className = 'shooting-star';
+            star.style.left = `${Math.random() * 100}vw`;
+            document.body.appendChild(star);
+        }
+    </script>
+</body>
+</html>
