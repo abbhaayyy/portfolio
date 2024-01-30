@@ -1,97 +1,126 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Down for maintenance...</title>
-  <link rel="icon" type="image/png" href="updating.png">
-  <style>
-    body {
-      background-color: #fff;
-      text-align: center;
-      padding: 150px;
-      position: relative; /* Add relative positioning */
-      overflow: hidden; /* Hide overflow to prevent scrollbar */
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Down for Maintenance</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+  }
 
-    h1 {
-      font-size: 50px;
-    }
+  .container {
+    text-align: center;
+    z-index: 1;
+  }
 
-    body {
-      font: 20px Helvetica, sans-serif;
-      color: #191919;
-    }
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
 
-    #img360 {
-      border-radius: 100px;
-      margin-left: 0px;
-      animation: glow 1.5s ease-in-out infinite alternate;
-    }
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
 
-    @keyframes glow {
-      0% {
-        box-shadow: 0 0 5px 2px rgba(255, 0, 0, 0.7);
-      }
-      100% {
-        box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.7);
-      }
-    }
+  #resume-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+  }
 
-    #resume-link {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #ff0000;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-      margin-top: 20px;
-      text-transform: uppercase;
-    }
+  #resume-link:hover {
+    background-color: #ffab40;
+  }
 
-    #resume-link:hover {
-      background-color: #ff3333;
-    }
+  /* Shooting stars */
+  .shooting-star {
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    animation: shooting 4s linear infinite;
+  }
 
-    /* Glowing border */
-    body::before,
-    body::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border: 2px solid transparent;
-      border-radius: 5px; /* Adjust border radius as needed */
-      pointer-events: none; /* Ensure pseudo-elements are not clickable */
-      animation: glow-border 2s linear infinite alternate;
+  @keyframes shooting {
+    0% {
+      opacity: 1;
+      transform: translate(-200px, -200px);
     }
+    100% {
+      opacity: 0;
+      transform: translate(200vw, 200vh);
+    }
+  }
 
-    body::before {
-      top: -5px; /* Adjust top position to cover the top border */
-      left: -5px; /* Adjust left position to cover the left border */
-      box-shadow: 0 0 20px 5px rgba(255, 0, 0, 0.7); /* Adjust the box-shadow as needed */
-    }
+  /* Fun elements */
+  .fun-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
 
-    body::after {
-      bottom: -5px; /* Adjust bottom position to cover the bottom border */
-      right: -5px; /* Adjust right position to cover the right border */
-      box-shadow: 0 0 20px 5px rgba(255, 0, 0, 0.7); /* Adjust the box-shadow as needed */
-    }
+  .fun-elements img {
+    position: absolute;
+    pointer-events: none;
+    animation: floating 6s ease-in-out infinite;
+  }
 
-    @keyframes glow-border {
-      0%, 100% {
-        box-shadow: 0 0 20px 5px rgba(255, 0, 0, 0.7);
-      }
-      50% {
-        box-shadow: 0 0 10px 2px rgba(255, 0, 0, 0.7);
-      }
+  @keyframes floating {
+    0% {
+      transform: translateY(0);
     }
-  </style>
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+</style>
 </head>
 <body>
-  <img id="img360" src="updating.png">
-  <h1>Sorry we're down for website renovation.</h1>
-  <h2>We'll be back shortly.</h2>
-  <a id="resume-link" href="https://docs.google.com/document/d/1M0VGRLSGoB6YwcFlwRmoVFROhKVvn14E/edit?usp=sharing&ouid=116328693547832382545&rtpof=true&sd=true" target="_blank">View Resume</a>
+  <div class="container">
+    <h1>Down for Maintenance</h1>
+    <h2>We'll be back shortly. </h2>
+    <h3>Website renovation in process. </h3>
+    <a id="resume-link" href="https://docs.google.com/document/d/1M0VGRLSGoB6YwcFlwRmoVFROhKVvn14E/edit?usp=sharing&ouid=116328693547832382545&rtpof=true&sd=true" target="_blank">View Resume</a>
+  </div>
+
+  <!-- Shooting stars -->
+  <div class="shooting-star">&#9733;</div>
+  <div class="shooting-star">&#9733;</div>
+  <div class="shooting-star">&#9733;</div>
+
+  <!-- Fun elements -->
+  <div class="fun-elements">
+      <img src="https://i.gifer.com/WG8Q.gif" alt="Alien" style="width: 35px; top: 55%; left: 25%;">
+      <img src="https://i.gifer.com/WG8Q.gif" alt="Alien" style="width: 35px; top: 55%; left: 70%;">
+    <img src="https://i.gifer.com/Vp3M.gif" alt="Alien" style="width: 100px; top: 10%; left: 10%;">
+    <img src="https://i.gifer.com/WMDz.gif" alt="Astronaut" style="width: 100px; top: 60%; left: 90%;">
+    <img src="https://i.gifer.com/X5NY.gif" alt="Rocket" style="width: 100px; top: 80%; left: 40%;">
+    <img src="https://i.gifer.com/hdt.gif" alt="Rocket" style="width: 100px; top: 10%; left: 75%;">
+  </div>
 </body>
 </html>
