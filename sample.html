@@ -1,37 +1,97 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Down for maintenance...</title>
-    <link rel="icon" type="image/png" href="updating.png">
-    <style>
-      body { 
-        background-color: #fff; 
-        text-align: center; 
-        padding: 150px; }
-      h1 { 
-        font-size: 50px; }
-      body { 
-        font: 20px Helvetica, sans-serif; color: #191919; 
+<head>
+  <title>Down for maintenance...</title>
+  <link rel="icon" type="image/png" href="updating.png">
+  <style>
+    body {
+      background-color: #fff;
+      text-align: center;
+      padding: 150px;
+      position: relative; /* Add relative positioning */
+      overflow: hidden; /* Hide overflow to prevent scrollbar */
+    }
+
+    h1 {
+      font-size: 50px;
+    }
+
+    body {
+      font: 20px Helvetica, sans-serif;
+      color: #191919;
+    }
+
+    #img360 {
+      border-radius: 100px;
+      margin-left: 0px;
+      animation: glow 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 5px 2px rgba(255, 0, 0, 0.7);
       }
-      #img360 {
-        border-radius: 100px;
-        margin-left: 0px;
-        -webkit-animation:spin 4s linear infinite;
-        -moz-animation:spin 4s linear infinite;
-        animation:spin 4s linear infinite;
+      100% {
+        box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.7);
       }
-      @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-      @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-      @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-    </style>
-  </head>
-  <body>
-    <img id="img360" src="updating.png">
-    <h1>Sorry we're down for website renovation.</h1>
-    <h2>We'll be back shortly.</h2>
-  </body>
+    }
+
+    #resume-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff0000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+      text-transform: uppercase;
+    }
+
+    #resume-link:hover {
+      background-color: #ff3333;
+    }
+
+    /* Glowing border */
+    body::before,
+    body::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 2px solid transparent;
+      border-radius: 5px; /* Adjust border radius as needed */
+      pointer-events: none; /* Ensure pseudo-elements are not clickable */
+      animation: glow-border 2s linear infinite alternate;
+    }
+
+    body::before {
+      top: -5px; /* Adjust top position to cover the top border */
+      left: -5px; /* Adjust left position to cover the left border */
+      box-shadow: 0 0 20px 5px rgba(255, 0, 0, 0.7); /* Adjust the box-shadow as needed */
+    }
+
+    body::after {
+      bottom: -5px; /* Adjust bottom position to cover the bottom border */
+      right: -5px; /* Adjust right position to cover the right border */
+      box-shadow: 0 0 20px 5px rgba(255, 0, 0, 0.7); /* Adjust the box-shadow as needed */
+    }
+
+    @keyframes glow-border {
+      0%, 100% {
+        box-shadow: 0 0 20px 5px rgba(255, 0, 0, 0.7);
+      }
+      50% {
+        box-shadow: 0 0 10px 2px rgba(255, 0, 0, 0.7);
+      }
+    }
+  </style>
+</head>
+<body>
+  <img id="img360" src="updating.png">
+  <h1>Sorry we're down for website renovation.</h1>
+  <h2>We'll be back shortly.</h2>
+  <a id="resume-link" href="https://docs.google.com/document/d/1M0VGRLSGoB6YwcFlwRmoVFROhKVvn14E/edit?usp=sharing&ouid=116328693547832382545&rtpof=true&sd=true" target="_blank">View Resume</a>
+</body>
 </html>
-    <div id="container">
-        
-        <a id="resume-link" href="https://docs.google.com/document/d/1M0VGRLSGoB6YwcFlwRmoVFROhKVvn14E/edit?usp=sharing&ouid=116328693547832382545&rtpof=true&sd=true" target="_blank">View Resume</a>
-    </div>
